@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Happy Birthday - Final</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Authentication -->
+<div id="authLayer" class="auth-layer">
+  <form id="authForm" class="auth-form" autocomplete="off">
+    <label for="nameInput">Please write your complete legal name to verify yourself</label>
+    <input type="text" id="nameInput" placeholder="Your full legal name" required />
+    <button type="submit">Verify</button>
+    <p id="authMessage" class="auth-message" aria-live="polite"></p>
+    <button id="continueBtn" class="hidden">Continue</button>
+  </form>
+</div>
+
+<!-- Main content -->
+<div id="birthdayContent" class="hidden" aria-hidden="true">
+  <canvas id="confettiCanvas"></canvas>
+  <div class="container">
+    <h1 id="typewriter"></h1>
+    <p class="subtitle">28th September - A special day for a special girl.</p>
+    <p class="love">You are my beautiful sunshine, my heart, my everything.</p>
+    <p class="wishes">Wishing you all the happiness and love in the world on your birthday and always!</p>
+
+    <!-- Buttons -->
+    <div class="button-group" role="group" aria-label="Interactive controls">
+      <button id="loveMeterBtn" aria-describedby="loveMeterDesc">💖 Check Our Love Meter</button>
+      <button id="messageBtn" aria-haspopup="dialog" aria-controls="longMessageModal">💌 A Message for You</button>
+      <button id="sendLoveBtn">❤️ Send Love</button>
+    </div>
+
+    <!-- Love meter message -->
+    <p id="loveMeterMessage" class="love-meter-message" aria-live="polite"></p>
+  </div>
+
+  <!-- Photo Gallery Carousel -->
+  <section class="gallery-section" aria-label="Photo gallery with past memories">
+    <h2>Beautiful Baby</h2>
+    <div class="carousel" role="list" tabindex="0" aria-label="Scrollable photo list">
+      <div class="carousel-inner" id="carouselInner">
+        <img src="2.jpg" alt="Memory 1" role="listitem" />
+        <img src="3.jpg" alt="Memory 2" role="listitem" />
+        <img src="4.jpg" alt="Memory 3" role="listitem" />
+        <img src="5.jpg" alt="Memory 3" role="listitem" />
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button id="prevBtn" aria-label="Previous image">❮ Prev</button>
+      <button id="nextBtn" aria-label="Next image">Next ❯</button>
+    </div>
+
+  <!-- Message Modal -->
+  </section>
+  <section id="longMessageModal" class="message-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <button id="closeMessageBtn" class="close-msg-btn" aria-label="Close message">✖</button>
+    <div class="message-section">
+      <h2 id="modalTitle">Message for You 💌</h2>
+      <p>So, you are finally 21 years old now. Oops! I meant 21 years YOUNG. You hate it when I call you old. But don't you worry my sweet child, with the cute little face like yours and your cute little nose with the big beautiful Brown eyes, you are going to look Hot and Gorgeous (like me of course) till we both are going on a cruise ship after our retirement. I can't even tell how much glad I am that you are born. Like seriously, who knew there actually is a girl who can be Beautiful, Cute, Gorgeous, Smart, Sassy, Dumb, Childish, Mature, Emotional and Logical, that too all at once. I know it is YOUR Birthday, but I want make a B'day wish too, that I really hope I can celebrate your Birthdays till we are old and wrinkly, when I still tease you and make fun of you to see your angry face, then see the smile and then laugh in the most beautiful way that you do. I want to see you become a well known Doctor who is loved by everyone. I wanna see you thrive in the medical college happily. I want to see yourself as an unstoppable Godly force. All in all, I want to see you Happy and smiling even through tough times. Happy Birthday Baby!</p>    
+    </div>
+  </section>
+
+  <!-- Balloons -->
+  <div class="balloons" aria-hidden="true">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+  </div>
+
+  <!-- Thought bubbles -->
+  <div id="thoughtBubblesContainer" aria-hidden="true"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
